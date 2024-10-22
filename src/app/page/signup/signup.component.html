@@ -1,0 +1,66 @@
+<div class="container mt-5">
+  <form [formGroup]="form">
+    <div class="row mb-4">
+      <div class="col-6 mb3">
+        <label for="name" class="form-label me-2">Name</label>
+        <input type="text" id="name" formControlName="name" />
+      </div>
+      <div class="col-6 mb3">
+        <label for="surname" class="form-label me-2">Surname</label>
+        <input type="text" id="surname" formControlName="surname" />
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-6 mb3">
+        <label for="password" class="form-label me-2">Password</label>
+        <input type="password" id="password" formControlName="password" />
+      </div>
+      <div class="col-6 mb3">
+        <label for="confPassword" class="form-label me-2"
+          >Confirm password</label
+        >
+        <input
+          type="password"
+          id="confPassword"
+          formControlName="confPassword"
+        />
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-6 mb3">
+        <label for="gender" class="form-label me-2">Gender</label>
+        <select id="gender" formControlName="gender">
+          <option selected value="">--select a gender--</option>
+          <option value="man">Man</option>
+          <option value="woman">Woman</option>
+          <option value="other">I prefer not to specify</option>
+        </select>
+      </div>
+      <div class="col-6 mb3">
+        <label for="profilePic" class="form-label me-2">Profile Picture</label>
+        <input type="file" id="profilePic" formControlName="profilePic" />
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-6 mb3">
+        <label for="biografy" class="form-label me-2">Biografy</label>
+        <input type="textarea" id="biografy" formControlName="biografy" />
+      </div>
+      <div class="col-6 mb3">
+        <label for="username" class="form-label me-2">Username</label>
+        <input type="text" id="username" formControlName="username" />
+      </div>
+    </div>
+    <button
+      [disabled]=""
+      (click)="send()"
+      type="submit"
+      class="btn btn-primary"
+    >
+      Submit
+    </button>
+  </form>
+</div>
